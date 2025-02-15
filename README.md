@@ -17,6 +17,12 @@ locate templates directory of pykms and replace the content with whats in this p
 ### Docker
 I highly suggest using [11note](https://github.com/11notes/docker-kms)'s image. mount the template directory of this project to the container. example:
 
+### Screenshots
+![{81958E47-9251-4A4B-B0DF-9484DEFFCD50}](https://github.com/user-attachments/assets/d55efd2a-07ba-42be-ae8f-cbe5b996bd9a)
+
+![{9E8E4E72-43B0-4FC3-9944-31E780FBCCF0}](https://github.com/user-attachments/assets/e3e9a34c-8fe9-4c5d-9509-749a057914ee)
+
+
 ```
 name: "kms"
 services:
