@@ -8,9 +8,8 @@ I came across a reddit post about it decided to test py-kms myself and to my sup
 - Dark theme
 - Modern CSS
 - Dropdown Products page
-
-### TODO
-- when user clicks on the GLVK make it copy to clipboard
+- Copy to clipboard on GLVK
+- Smooth Animation
 
 ### Usage
 locate templates directory of pykms and replace the content with whats in this project.
