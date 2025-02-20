@@ -76,6 +76,9 @@
                         <div>
                             <div class="text-gray-900 dark:text-gray-100 text-sm">{{ client.machineName }}</div>
                             <div class="text-gray-500 dark:text-gray-400 text-xs mt-1">
+                              Last IP: <span>{{ client.machineIp }}</span>
+                          </div>
+                            <div class="text-gray-500 dark:text-gray-400 text-xs mt-1">
                                 Last active: <span class="convert_timestamp">{{ client.lastRequestTime }}</span>
                             </div>
                         </div>
@@ -122,9 +125,4 @@
     {% endif %}
 </div>
 
-<script>
-    document.querySelectorAll('.convert_timestamp').forEach(el => {
-        el.textContent = new Date(el.textContent).toLocaleString();
-    });
-</script>
 {% endblock %}

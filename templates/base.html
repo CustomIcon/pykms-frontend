@@ -3,20 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>py-kms {% block title %}{% endblock %}</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        pre {
-            white-space: pre-wrap;
-            word-wrap: break-word;
-        }
-        .truncate {
-            max-width: 200px;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-        /* {% block style %}{% endblock %} */
-    </style>
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/pykms-frontend.css') }}">
 </head>
 <body class="h-full">
     <div class="min-h-full">
