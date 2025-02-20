@@ -1,6 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 pre {
   white-space: pre-wrap;
   word-wrap: break-word;
