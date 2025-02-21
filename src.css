@@ -1,0 +1,11 @@
+@import "tailwindcss";
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+.truncate {
+  max-width: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

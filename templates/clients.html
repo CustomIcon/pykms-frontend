@@ -25,25 +25,19 @@
     </div>
 
     <!-- Stats Cards -->
-    <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-10">
-        <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700">
-            <dt class="text-sm font-medium text-gray-600 dark:text-gray-300">Total Clients</dt>
-            <dd class="mt-2 text-3xl font-bold text-gray-900 dark:text-white">{{ count_clients }}</dd>
-        </div>
-        <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700">
-            <dt class="text-sm font-medium text-gray-600 dark:text-gray-300">Windows</dt>
-            <dd class="mt-2 text-3xl font-bold text-gray-900 dark:text-white">{{ count_clients_windows }}</dd>
-        </div>
-        <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700">
-            <dt class="text-sm font-medium text-gray-600 dark:text-gray-300">Office</dt>
-            <dd class="mt-2 text-3xl font-bold text-gray-900 dark:text-white">{{ count_clients_office }}</dd>
-        </div>
-        <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700">
-            <dt class="text-sm font-medium text-gray-600 dark:text-gray-300">Products</dt>
-            <dd class="mt-2 text-3xl font-bold text-blue-600 dark:text-blue-400">
-                <a href="/products">{{ count_projects }}</a>
-            </dd>
-        </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+      <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700">
+          <dt class="text-sm font-medium text-gray-600 dark:text-gray-300">Total Clients</dt>
+          <dd class="mt-2 text-3xl font-bold text-gray-900 dark:text-white">{{ count_clients }}</dd>
+      </div>
+      <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700">
+          <dt class="text-sm font-medium text-gray-600 dark:text-gray-300">Windows</dt>
+          <dd class="mt-2 text-3xl font-bold text-gray-900 dark:text-white">{{ count_clients_windows }}</dd>
+      </div>
+      <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700">
+          <dt class="text-sm font-medium text-gray-600 dark:text-gray-300">Office</dt>
+          <dd class="mt-2 text-3xl font-bold text-gray-900 dark:text-white">{{ count_clients_office }}</dd>
+      </div>
     </div>
 
     <!-- Clients Table -->
@@ -75,6 +69,9 @@
                     <td class="px-4 py-3">
                         <div>
                             <div class="text-gray-900 dark:text-gray-100 text-sm">{{ client.machineName }}</div>
+                            <div class="text-gray-500 dark:text-gray-400 text-xs mt-1">
+                              Last IP: <span>{{ client.machineIp }}</span>
+                          </div>
                             <div class="text-gray-500 dark:text-gray-400 text-xs mt-1">
                                 Last active: <span class="convert_timestamp">{{ client.lastRequestTime }}</span>
                             </div>
@@ -122,9 +119,4 @@
     {% endif %}
 </div>
 
-<script>
-    document.querySelectorAll('.convert_timestamp').forEach(el => {
-        el.textContent = new Date(el.textContent).toLocaleString();
-    });
-</script>
 {% endblock %}
