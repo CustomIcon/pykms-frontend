@@ -19,20 +19,6 @@
             </div>
             {% endif %}
         </div>
-
-        <footer class="border-t border-gray-700 mt-8 py-6">
-            <div class="text-center text-sm text-gray-400 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <p>
-                    <strong class="text-gray-200">py-kms</strong> is online since <span class="convert_timestamp">{{ start_time }}</span>.
-                    Accessed {{ get_serve_count() }} times. View license <a href="/license" class="text-blue-400 hover:text-blue-300">here</a>.
-                </p>
-                {% if version_info %}
-                <p class="mt-2">
-                    Version "{{ version_info['hash'] }}" from branch "{{ version_info['branch'] }}" of py-kms
-                </p>
-                {% endif %}
-            </div>
-        </footer>
     </div>
 
     <script>
